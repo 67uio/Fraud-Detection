@@ -1,0 +1,9 @@
+{
+  "notebook.defaultFormatter": "ms-python.python",
+  "[sql]": {
+    "editor.defaultFormatter": null
+  },
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda"
+}
+
