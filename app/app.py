@@ -7,11 +7,15 @@ import joblib
 import os
 
 #Loading Model & encoders
-base_path = os.path.join(os.path.dirname(__file__), "..", "encoders")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ENCODERS_DIR = os.path.join(BASE_DIR, "..", "encoders")
+
+cols = ["Sex", "Housing", "Saving accounts", "Checking account"]
+
 encoders = {
-    col : joblib.load(rf'D:\Data analysis\ml\here you go\my work\FRAUD DETECTION\encoders\{col}_encoder.pkl')
-    for col in ["Sex", "Housing", "Saving accounts", "Checking account"]
-}      
+    col: joblib.load(os.path.join(ENCODERS_DIR, f"{col}_encoder.pkl"))
+    for col in cols
+}
 
 # buliding the form 
 st.title('Credit Risk Prediction App')
