@@ -6,7 +6,7 @@ import pandas as pd
 import joblib 
 
 #Loading Model & encoders
-model =joblib.load('D:\Data analysis\ml\here you go\my work\logistic project\models\Xgb_model.pkl')
+model =joblib.load(r'D:\Data analysis\ml\here you go\my work\logistic project\models\Xgb_model.pkl')
 encoders = {
     col : joblib.load(rf'D:\Data analysis\ml\here you go\my work\logistic project\encoders\{col}_encoder.pkl')
     for col in ["Sex", "Housing", "Saving accounts", "Checking account"]
