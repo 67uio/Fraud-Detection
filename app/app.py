@@ -4,9 +4,10 @@
 import streamlit as st
 import pandas as pd
 import joblib 
+import os
 
 #Loading Model & encoders
-model =joblib.load('models/Xgb_model.pkl')
+base_path = os.path.join(os.path.dirname(__file__), "..", "encoders")
 encoders = {
     col : joblib.load(rf'D:\Data analysis\ml\here you go\my work\FRAUD DETECTION\encoders\{col}_encoder.pkl')
     for col in ["Sex", "Housing", "Saving accounts", "Checking account"]
